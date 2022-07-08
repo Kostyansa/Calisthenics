@@ -22,8 +22,6 @@ services:
         image: 'postgres:latest'
         env_file:
           - .env
-        environment:
-          - POSTGRES_HOST_AUTH_METHOD=scram-sha-256
         volumes:
           - ./db-data/:/var/lib/postgresql/data/
         command: postgres -c listen_addresses='*'
