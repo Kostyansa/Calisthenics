@@ -79,7 +79,7 @@ class AdapterTelegram:
         scheduler.scheduled_job(
             'cron',
             day_of_week='mon-fri',
-            hour=10,
+            hour=8,
             timezone=timezone("Europe/Moscow"),
             next_run_time=datetime.now()
         )(self.scheduled)
